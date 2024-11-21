@@ -1,0 +1,43 @@
+#ЗАДАНИЕ 1
+tasks=[("проверить почту",3), ("написать отзыв",1),("позвонить клиенту",2)]
+s=sorted(tasks, key = lambda task: task[1])
+print(s)
+
+
+
+#ЗАДАНИЕ 2
+purchases = [
+    {"item": "Laptop", "price": 1000, "quantity": 2},
+    {"item": "Mouse", "price": 25, "quantity": 5},
+    {"item": "Keyboard", "price": 45, "quantity": 3}
+]
+s=list(map(lambda p: p['price'] * p["quantity"], (purchases)))
+ms = max (s)
+print("общая стоимость каждой покупки: ", s)
+print("самая дорогая покупка: ", ms)
+
+
+
+#ЗАДАНИЕ 3
+clients = [
+    {"name": "Alice", "income": 50000},
+    {"name": "Bob", "income": 120000},
+    {"name": "Charlie", "income": 70000}
+]
+c=list(map(lambda client: {**client, "category":
+    "High" if client ["income"]>100000
+    else "Medium" if client ["income"]>=50000
+    else "Low"}, clients))
+print(c)
+
+
+
+
+#ЗАДАНИЕ 4
+flights = [
+    {"flight": "A1", "departure": 9, "arrival": 12},
+    {"flight": "B2", "departure": 14, "arrival": 18},
+    {"flight": "C3", "departure": 6, "arrival": 8}
+]
+f=list(filter(lambda flight: flight["arrival"] < 12, flights))
+print(f)
